@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulacion del DOM</title>
+    <style>
+        button {
+            margin: 8px auto;
+        }
+        .container {
+            border: 1px solid red;
+            width: 100%;
+            height: 100px;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manipulacion del DOM</h1>
+
+    <!-- Este pedazo de HTML es para el archivo lecturaYescritura.js -->
+
+    <!-- <p atributo="si que si">Pararrafo</p>
+    <p class="clase">Parrafo con clase y clase agregada y otra removida con JS (lecturaYescritura.js)</p>
+    <p class="clase">Parrafo con clase 2</p>
+    <p id="id">Parrafo con #id</p>
+    <p id="iD">Parrafo con #iD </p> 
+    <input type="text" placeholder="pon algo aqui"> -->
+
+    <!-- Script -->
+    <!-- <script src="./lecturaYescritura.js"></script> -->
+
+    <!-- Este pedazo de HTML es para el archivo eventos.js -->
+    <!-- se agrega onchage y onclick para que la etiqueta escriba codigo cuando se da click o se cambia con el tab, es preferible guardarlo en una funcion y luego llamar esa funcion  -->
+    <h2>Creado con propiedad HTML onchange / onclick</h2>
+    <input id="calculo1--1" onchange="inputOnChange()" placeholder="pon algo aqui">
+    <input id="calculo1--2"><br>
+    <button id="btnCalcular" onclick="btnOnClick()">Concatenar</button><br>
+    <div class="container"></div>
+
+    <h2>Creado con propiedad JS addEventListener </h2>
+    <input id="calculo2--1"placeholder="pon algo aqui">
+    <input id="calculo2--2"><br>
+    <button id="btnCalcular2">Concatenar</button><br>
+    <div class="container container2" id="container"></div>
+
+    <script src="./eventos.js"></script>
+</body>
+</html>

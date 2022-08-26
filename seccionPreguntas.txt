@@ -1,0 +1,187 @@
+1.- Preguntas
+que es una variable y para que sirve?
+-una variable es un estado en la memoria que almacena un parametro, hay diferentes tipos de datos que pueden ser almacenados.
+Para declarar una variable es necesario utilizar las palabras reservadas por JS var, let, o const despues se le asigna un nombre a dicha variable. Puede ser inicializada en ese momento o despues sin necesidad de usar las palabras reservadas.
+
+difetencia entre declarar e inicializar una variable?
+-el declarar una variable solo la apartes en la memoria indicando qeu existira un valor con ese nombre. El inicializar la variable es el asignarle un valor a esa variable que pueden ser varios tipos de valores
+
+diferencia entre sumar numeros y concatenar strings?
+-la suma de dos numeros es la operacion matematicas y como resultado nos otorga el valor de la suma de ambos. Concatenar strings es para unir dos cadenas de una texto y se uso el simbolo + para hacerlo.
+
+cual operador me permite sumar y concatenar?
+- el simbolo de +
+
+2.- tipo de datos
+Determina el nombre y tipo de dato para almacenar:
+-nombre : string
+-apellido: string
+-nombre de usuario de platzo: string
+-edad: number
+-email: string
+-mayor de edad: boolean (true or false)
+-dinero ahorrado: number
+-deudas: number
+
+3.- variables en JS
+traduce a JS el codigo anterior:
+let name = "cristhian"
+let lastname= "salas"
+let usernamePlatzi = "cristhian420"
+let edad = 31;
+let email = "cristhian.sm@hotmail.com"
+let adult = true;
+let savedMoney = 2000;
+let debtMoney = 5000;
+
+4.- calcula e imprime las variables:
+-nombre completo: 
+let fullname = name + " " + lastname;
+-dinero real:
+let realMoney = savedMoney - debtMoney;
+
+
+funciones
+1.- Preguntas
+que es una funcion?
+-pieza de codigo que realiza una tarea en especifico, suele ser separado para reutilizar el codigo con piezas de condigo que hacen esa funcion
+
+cuando me sirve usar una funcion en mi codigo?
+-cuando tenemos una pieza de codigo que pueder ser reutilizada para otra funcion y siempre devuleve un resultado.
+
+cual es la diferencia entre paremetros y argumenteos de una funcion?
+-la diferencia los parametros son las variable declaradas con anterioridad al momento de pasarla por la funcion se convierten den argumentos. 
+
+2.- crear una funcion 
+function saludo(name,lastname, nickname) {
+	const completeName = name + " " +  lastname;
+
+	console.log("mi nombre es" + completeName + ", pero prefiero que me digas " + nickname);
+}
+
+saludo("cristhian","salas","chino");
+
+
+Condicionales
+1.- Preguntas
+Que es un codicional?
+-es una pieza de codigo que toma deciciones en base al estado de cierta variable(admite solo valores booleanos -true or false)y esta ejecuta un codigo u otro dependiendo el resultado.
+
+tipos de condicionales que existen en JS y diferencias?
+-existen dos tipos if..else o while..do
+con condicional if esnecesario que lafuncion sea true para que realice la pieza de codigo que se encuentra dentro de los corchetes, en caso de tener otra pieza de codigo es necesario el else.
+Con switch es cuando tienes varios casos y para que no sea necesario un anidado de muchos else.
+
+puedo combinar funciones y condicionales
+-
+
+2.- replica el comportamiento de swithc a if else
+	let tipoSub = prompt("he");
+if(tipoSub === "free"){
+       console.log("Solo puedes tomar los cursos gratis");
+      } else if (tipoSub == "Basic") {
+       console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+        } else if (tipoSub == "Expert") {
+       console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+        } else {
+       console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+}  
+}
+
+3.- replica con arrays y objects
+
+Ciclos
+1.-Preguntas
+que es un ciclo
+- es un bucle que se repite en cada iteracion(vuelta) que hace al array 
+
+tipos de ciclos que existen?
+-existen varias funciones que hacen los ciclos sin necidad de un for pero los principales son 
+For
+While
+Do While
+
+que es un ciclo infinito y porque es un problema?
+-se le llama un ciclo infinito cuando no tiene una terminacion y la maquina entra en un bucle la cual no se puede parar ya que esa intruccion no se encentra y hace que nuestra computadora se realentice
+
+puedo mezclar ciclos y condicionales
+- si se puede realizar para generar una iteraccion y que confirme ciertos datos atraves de condicionales en cada elemento dentro del array
+
+2.-replica el comportamiento de for para while:
+	let i = 0;
+	while (i < 5 ) {
+console.log("el valor de i es: " + i);
+	i ++;
+}
+
+
+        let i = 10;
+        while (i >= 2 ) {
+console.log("el valor de i es: " + i);
+        i --;
+}
+
+3.- programa dice si respondiste mal una suma:
+	let numero1 = 2;
+	let numero2 = 2;
+	let resultado = perseInt(prompt(`cuanto es el resultado de ${numero1} + ${numero2}`));
+
+	if(resultado == (numero1 + numero2) ){
+	console.log("Bien");
+	}
+	else {
+	console.log("Mal");
+	}
+
+Listas
+1.-Preguntas
+quees un array?
+-se puede intrerpretar como una caja en la cual podemos poner diversos parametros, separados por su indice. Cada valor de array puede contener distintos tipos de datos. Se escriben entre [] y para separar cada lugar es necesario una coma
+
+que es un objeto?
+-objeto es un conjunto de tipo de  datos en los cuales incluye ditinto tipos de clase que puden ser agregados al objeto
+
+cuando es mejor usar objetos o arrays?
+- el array se usa cuando tenemos distintos tipos de datos y queremos meterlos dentro de un gran contenedor y nos permite interactuar con cada uno de esos datos internos.
+
+puedo mezclar arrays y objetos?
+-si se puede de echo e muy comun meter objetos dentro de un contenedor mas grande con valores de difente tipo.
+
+
+2.-crea una funcion que reciba un array como parametro e imprima su primer elemento:
+let array1 = [23,"doctor",true,459,"whats?"];
+
+function primerElemento(array1) {
+	console.log(array1[0]);
+} 
+
+primerElemento(array1);
+
+
+3.- crea una funcion que reciba un array e imprima todos los elementos 
+
+let array1 = [23,"doctor",true,459,"whats?"];
+
+function impElement(parametro){
+parametro.forEach(elemento => console.log (elemento));
+};
+
+4.-crea una funcion que reciba un objeto e imprima todos sus elementos uno por uno.
+
+let perros = {
+	color: "red",
+	raza: "chihuahua",
+	edad: 1
+}
+
+function printElement(objeto) {
+	for (let i in objeto) {
+	console.log(objeto[i]);
+}
+}
+ 
+printElement(perros);
+
+
+
+
